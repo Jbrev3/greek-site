@@ -1,0 +1,89 @@
+body {
+	font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/library.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  
+}
+
+.hero {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: absolute;
+}
+
+nav {
+  margin: 0 15px;
+	grid-column: 1 / -1;
+  display: flex;
+	justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+	font-size: 1.8rem;
+	color: white;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav li {
+	list-style: none;
+	padding-left: 30px;
+}
+
+nav a {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: white;
+	position: relative;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover:before {
+	visibility: visible;
+  width: 100%;
+}
+
+h1 {
+  font-size: 10rem;
+  color: white;
+  position: relative;
+}
+
+.solid {
+  font-family: 'Londrina Solid', cursive;
+}
+
+.outline {
+  font-family: 'Londrina Outline', cursive;
+}
+
+.green {
+  color: #3fbf2c;
+}
+
+.white {
+  color: #FFF;
+}

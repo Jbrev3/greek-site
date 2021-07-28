@@ -1,21 +1,30 @@
 
 
 body {
-  
+
 }
 
 h1 {
-  
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+  top: 5vh;
 }
 
 h2 {
-  margin: 10px 0px;
+  position: relative;
+  top: 10vh;
   padding: 0;
 }
 
 button {
   width: 250px;
   border-radius: 5px;
+  margin: 0;
+  position: fixed;
+  bottom: 30vh;
 }
 
 .card {

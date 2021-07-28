@@ -30,7 +30,7 @@ function createAlphabet (x) {
   };
 }
 
-alphaArray = [ ["α", "a", 1], ["β", "b", 2], ["γ", "g", 2], ["δ", "d", 2], ["ε", "&#277", 1], ["ζ", "z", 2], ["η", "&#257", 1], ["θ", "th", 2], ["ι", "i", 1], ["κ", "k", 2], ["λ", "l", 2], ["μ", "m", 2], ["ν", "n", 2], ["ξ", "x", 2], ["ο", "&#335", 1], ["π", "p", 2], ["ρ", "r", 2], ["σ", "s", 2], ["τ", "t", 2], ["υ", "oo", 1], ["φ", "ph", 2], ["χ", "k" /*or "ch"*/, 2], ["ψ", "ps", 2], ["ω", "&#333", 1], ["αι", "ay", 3], ["ει", "&#257", 3], ["οι", "oy", 3], ["αυ", "ow", 3], ["ου", "oo", 3], ["υι", "we", 3], ["ευ", "yoo", 3], ["ηυ", "yoo", 3] ];
+alphaArray = [ ["α", "a", 1], ["β", "b", 2], ["γ", "g", 2], ["δ", "d", 2], ["ε", "&#277", 1], ["ζ", "z", 2], ["η", "&#257", 1], ["θ", "th", 2], ["ι", "i", 1], ["κ", "k", 2], ["λ", "l", 2], ["μ", "m", 2], ["ν", "n", 2], ["ξ", "x", 2], ["ο", "&#335", 1], ["π", "p", 2], ["ρ", "r", 2], ["σ", "s", 2], ["τ", "t", 2], ["υ", "oo", 1], ["φ", "ph", 2], ["χ", "k" /*or "ch"*/, 2], ["ψ", "ps", 2], ["ω", "&#333", 1], ["αι", "&#299", 3], ["ει", "&#257", 3], ["οι", "oi", 3], ["αυ", "ow", 3], ["ου", "oo", 3], ["υι", "w&#275", 3], ["ευ", "yoo", 3], ["ηυ", "yoo", 3] ];
 
 function checkEdgeCases() {
   //check for final sigma and double gamma
@@ -79,6 +79,8 @@ const practice = {
     }
 };
 
+buttonClick();
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -88,11 +90,11 @@ function buttonClick () {
       practice.generateQandA();
       practice.updatePage();
       document.getElementById("next").innerHTML = "Show Pronunciation";
-      document.getElementById("answer").style.color = "white";
+      document.getElementById("answer").style.visibility = "hidden";
       practice.answerShown = false;
     } else {
       document.getElementById("next").innerHTML = "Next";
-      document.getElementById("answer").style.color = "black";
+      document.getElementById("answer").style.visibility = "visible";
       practice.answerShown = true;
     }
 

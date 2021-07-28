@@ -67,7 +67,6 @@ svg {
 
 nav {
   background-color: var(--main-color-1);
-flex:1;
 }
 
 nav ul {
@@ -109,7 +108,8 @@ nav a:hover:before {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-flex:1;
+flex: 1;
+flex-direction: column;
 }
 
 h1 {

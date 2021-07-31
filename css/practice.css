@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-size: 4rem;
-  margin-top: 30%;
+  margin-top: 40px;
   margin-bottom: 0;
   padding-bottom: 0;
   flex-grow: 1;
@@ -51,4 +51,10 @@ h2 {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 15px;
 }

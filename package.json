@@ -1,0 +1,32 @@
+{
+  "name": "learn-the-languages",
+  "version": "1.0.0",
+  "description": "Practice Greek",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jbrev3/learn-the-languages.git"
+  },
+  "keywords": [
+    "greek"
+  ],
+  "author": "james rev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jbrev3/learn-the-languages/issues"
+  },
+  "homepage": "https://github.com/Jbrev3/learn-the-languages#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "styles-loader": "^3.0.0",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.7"
+  }
+}

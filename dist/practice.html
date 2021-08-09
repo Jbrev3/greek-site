@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,6 +7,7 @@
 
 	<title>Practice Greek</title>
 </head>
+
 <body>
 	<div class="wrapper">
 
@@ -52,8 +54,7 @@
 			</div>
 		</nav>
 
-		<div class="game-area">
-			<!-- <div class="options-container">
+		<!-- <div class="options-container">
 				<h3>Settings</h3>
 				<div class="options">
 					<SELECT id="mode" name="test" onchange="changeMode()">
@@ -76,16 +77,26 @@
 					</SELECT>
 				</div>
 			</div> -->
+		<div class="practice-container">
+			<h1 id="title">Pronunciation Practice</h1>
+
 			<div class="q-and-a">
-				<h1 id="title">Pronunciation Practice</h1>
-				<h2 id="greek">.</h2>
-				<h2 id="answer">.</h2>
-				<button type="button" id="next">Start</button>
-			</div>	
+				<div class="word-container">
+					<h6 class="label">Greek</h6>
+					<h2 id="greek"></h2>
+				</div>
+				<div class="word-container bottom-container">
+					<h6 class="label">Pronunciation</h6>
+					<h2 id="answer"></h2>
+				</div>
+			</div>
+			<button type="button" id="next">Start</button>
 		</div>
 	</div>
+
 
 	<script src="bundle.js"></script>
 
 </body>
+
 </html>

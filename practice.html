@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 	<title>Practice Greek</title>
 </head>
@@ -50,49 +50,86 @@
 						</filter>
 					</defs>
 				</svg>
-
 			</div>
 		</nav>
 
-		<!-- <div class="options-container">
-				<h3>Settings</h3>
-				<div class="options">
-					<SELECT id="mode" name="test" onchange="changeMode()">
-						<OPTION Value="Pronunciation Practice" selected>Pronunciation Practice</OPTION>
-						<OPTION Value="Parsing Practice">Parsing Practice</OPTION>
-					</SELECT>
-					<SELECT id="gender" onchange="changeGender()">
-						<OPTION Value="All" selected>All</OPTION>
-						<OPTION Value="Masculine">Masculine</OPTION>
-						<OPTION Value="Feminine">Feminine</OPTION>
-					</SELECT>
-					<SELECT id="order" onchange="changeOrder()">
-						<OPTION Value="Random Order" selected>Random Order</OPTION>
-						<OPTION Value="Paradigm Order">Paradigm Order</OPTION>
-					</SELECT>
-					<SELECT id="declension" onchange="changeDeclension()">
-						<OPTION Value="All" selected>All</OPTION>
-						<OPTION Value="3">3</OPTION>
-						<OPTION Value="3">2</OPTION>
-					</SELECT>
-				</div>
-			</div> -->
 		<div class="practice-container">
-			<h1 id="title">Pronunciation Practice</h1>
+			<div class="practice-header">
+				<h1 id="title">Pronunciation Practice</h1>
+				<button id="change-mode" class="test-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+					<path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+				  </svg></button>
+			</div>
 
 			<div class="q-and-a">
 				<div class="word-container">
-					<h6 class="label">Greek</h6>
+					<h6 class="label" id="greekLabel">Greek</h6>
 					<h2 id="greek"></h2>
 				</div>
 				<div class="word-container bottom-container">
-					<h6 class="label">Pronunciation</h6>
+					<h6 class="label" id="answerLabel">Pronunciation</h6>
 					<h2 id="answer"></h2>
 				</div>
 			</div>
-			<button type="button" id="next">Start</button>
+			<button type="button" class="btn-next" id="next">Start</button>
+
+			<div id="settings">
+				<div class="settings-content">
+					<h2>Settings</h2>
+					<h4 class="settings-section">Game Mode</h4>
+					<select name="mode" id="modeSelector">
+						<option value="Parsing Practice">Parsing Practice</option>
+						<option value="Pronunciation Practice">Pronunciation Practice</option>
+					</select>
+					<h4 class="settings-section">Options</h4>
+					<div id="parsing-options">
+						<div>
+						<label for="gender">Gender:</label>
+						<select name="gender" id="genderSelector">
+							<option>All</option>
+							<option>Masculine</option>
+							<option>Feminine</option>
+							<option>Neuter</option>
+						</select>
+					</div>
+						<div>
+						<label for="number">Number:</label>
+						<select name="number" id="numberSelector">
+							<option>All</option>
+							<option>Singular</option>
+							<option>Plural</option>
+						</select>
+					</div>
+						<div>
+						<label for="Case">Case:</label>
+						<select name="case" id="caseSelector">
+							<option>All</option>
+							<option>Nominative</option>
+							<option>Genative</option>
+							<option>Neuter</option>
+							<option>Dative</option>
+							<option>Accusative</option>
+						</select>
+					</div>
+					</div>
+					<div id="pronunciation-options">
+						<label for="syllables">Syllables:</label>
+						<select name="syllables" id="syllableSelector">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</div>
+					<button type="button" id="close-change-mode" class="test-btn-2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+						<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+					  </svg></button>
+					<button class="btn-next-2" id="change-game-mode">Apply</button>
+				</div>
+			</div>
 		</div>
 	</div>
+
 
 
 	<script src="bundle.js"></script>

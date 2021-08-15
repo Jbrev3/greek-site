@@ -136,6 +136,11 @@ h2 {
         padding: 10px;
     
     }
+
+    .test-btn {
+        right: 30px;
+        top: 20px;
+    }
 }
 
 
@@ -230,8 +235,6 @@ label {
     width: 50px;
     position: absolute;
     z-index: 1;
-    right: 30px;
-    top: 20px;
     cursor: pointer;
     border: none;
     background-color: white;
@@ -282,6 +285,11 @@ label {
     .bottom-container {
         border-top: 1px solid #4d0066;
         width: 70vw;
+    }
+
+    .test-btn {
+        right: 10px;
+        top: 10px;
     }
 
   }
